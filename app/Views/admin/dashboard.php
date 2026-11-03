@@ -1,0 +1,4 @@
+<?php require dirname(__DIR__).'/layouts/header.php'; ?><h2>Tableau de bord administrateur</h2><div class="row g-3">
+<div class="col-md-4"><div class="card p-3"><h3>Utilisateurs</h3><strong><?=count($users)?></strong><a href="/admin/users">Consulter</a></div></div>
+<div class="col-md-4"><div class="card p-3"><h3>Agences</h3><strong><?=count($agencies)?></strong><a href="/admin/agencies">Gérer</a></div></div>
+<div class="col-md-4"><div class="card p-3"><h3>Trajets</h3><strong><?=count($trips)?></strong><a href="/admin/trips">Consulter</a></div></div></div><?php require dirname(__DIR__).'/layouts/footer.php'; ?>

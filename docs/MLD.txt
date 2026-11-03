@@ -1,0 +1,29 @@
+USERS(
+  id PK,
+  lastname,
+  firstname,
+  phone,
+  email UQ,
+  password,
+  role,
+  created_at
+)
+
+AGENCIES(
+  id PK,
+  city UQ,
+  created_at
+)
+
+TRIPS(
+  id PK,
+  departure_agency_id FK -> AGENCIES.id,
+  arrival_agency_id FK -> AGENCIES.id,
+  departure_datetime,
+  arrival_datetime,
+  total_seats,
+  available_seats,
+  contact_user_id FK -> USERS.id,
+  created_at,
+  updated_at
+)

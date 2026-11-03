@@ -1,0 +1,7 @@
+{
+  "name": "touche-pas-au-klaxon-assets",
+  "private": true,
+  "scripts": {"build": "sass resources/scss/app.scss public/assets/css/app.css --style=compressed", "watch": "sass --watch resources/scss/app.scss public/assets/css/app.css"},
+  "dependencies": {"bootstrap": "^5.3.3"},
+  "devDependencies": {"sass": "^1.77.8"}
+}

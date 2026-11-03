@@ -1,0 +1,186 @@
+
+@import "../../node_modules/bootstrap/scss/functions";
+
+// Palette du projet
+$primary: #0074c7;
+$secondary: #00497c;
+$dark: #384050;
+$danger: #cd2c2e;
+$success: #82b864;
+$light: #f1f8fc;
+
+// Personnalisation Bootstrap
+$border-radius: 10px;
+$border-radius-lg: 14px;
+$btn-border-radius: 8px;
+$input-border-radius: 8px;
+
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Général
+body {
+    color: $dark;
+    font-family: Arial, sans-serif;
+    background: $light;
+    line-height: 1.6;
+}
+
+a {
+    color: $primary;
+    text-decoration: none;
+
+    &:hover {
+        color: $secondary;
+    }
+}
+
+// En-tête
+.site-header {
+    min-height: 68px;
+    padding: 12px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $secondary;
+    border-radius: 0 0 14px 14px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .12);
+}
+
+.brand {
+    color: white;
+    font-weight: bold;
+    font-size: 1.35rem;
+    text-decoration: none;
+
+    &:hover {
+        color: $light;
+    }
+}
+
+.site-header a:not(.brand) {
+    color: white;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 7px;
+
+    &:hover {
+        background: rgba(255, 255, 255, .15);
+    }
+}
+
+// Titres
+h1, h2, h3 {
+    color: $secondary;
+    font-weight: 700;
+}
+
+h1 {
+    margin: 30px 0 25px;
+    font-size: 1.9rem;
+}
+
+// Tableaux
+.table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(56, 64, 80, .07);
+
+    thead th {
+        background: $secondary;
+        color: white;
+        text-align: center;
+        padding: 14px 10px;
+        border: none;
+    }
+
+    td {
+        text-align: center;
+        vertical-align: middle;
+        padding: 13px 10px;
+    }
+
+    tbody tr:nth-child(even) {
+        background: #f1f8fc;
+    }
+
+    tbody tr:hover {
+        background: #e2f1fb;
+    }
+}
+
+.actions {
+    white-space: nowrap;
+}
+
+.inline {
+    display: inline;
+}
+
+// Boutons
+.btn {
+    font-weight: 600;
+    padding: 9px 17px;
+    transition: .2s ease;
+
+    &:hover {
+        transform: translateY(-1px);
+    }
+}
+
+.btn-primary {
+    box-shadow: 0 2px 5px rgba(0, 116, 199, .2);
+}
+
+.btn-danger {
+    box-shadow: 0 2px 5px rgba(205, 44, 46, .15);
+}
+
+// Formulaires
+.form-card {
+    max-width: 700px;
+    margin: 35px auto;
+    padding: 30px;
+    background: white;
+    border: 1px solid #e1eaf0;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(56, 64, 80, .08);
+}
+
+.form-label {
+    color: $dark;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.form-control,
+.form-select {
+    min-height: 43px;
+    border-color: #d5e0e8;
+
+    &:focus {
+        border-color: $primary;
+        box-shadow: 0 0 0 .2rem rgba(0, 116, 199, .15);
+    }
+}
+
+// Messages
+.alert {
+    border-radius: 9px;
+    border: none;
+}
+
+// Pied de page
+.site-footer {
+    text-align: center;
+    margin-top: 100px;
+    padding: 22px 15px;
+    color: #687386;
+    border-top: 1px solid #dce7ef;
+    font-size: .9rem;
+}

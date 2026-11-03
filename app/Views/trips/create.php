@@ -1,0 +1,10 @@
+<?php require dirname(__DIR__).'/layouts/header.php'; ?><div class="form-card"><h2><?=isset($trip)?'Modifier':'Créer'?> un trajet</h2>
+<form method="post" action="<?=isset($trip)?'/trips/'.$trip['id'].'/update':'/trips'?>">
+<label>Agence de départ</label><select class="form-select mb-3" name="departure_agency_id" required><?php foreach($agencies as $a): ?><option value="<?=$a['id']?>" <?=isset($trip)&&$trip['departure_agency_id']==$a['id']?'selected':''?>><?=htmlspecialchars($a['city'])?></option><?php endforeach;?></select>
+<label>Agence d'arrivée</label><select class="form-select mb-3" name="arrival_agency_id" required><?php foreach($agencies as $a): ?><option value="<?=$a['id']?>" <?=isset($trip)&&$trip['arrival_agency_id']==$a['id']?'selected':''?>><?=htmlspecialchars($a['city'])?></option><?php endforeach;?></select>
+<div class="row"><div class="col"><label>Départ</label><input class="form-control mb-3" type="datetime-local" name="departure_datetime" value="<?=isset($trip)?date('Y-m-d\TH:i',strtotime($trip['departure_datetime'])):''?>" required></div>
+<div class="col"><label>Arrivée</label><input class="form-control mb-3" type="datetime-local" name="arrival_datetime" value="<?=isset($trip)?date('Y-m-d\TH:i',strtotime($trip['arrival_datetime'])):''?>" required></div></div>
+<label>Nombre total de places</label><input class="form-control mb-3" type="number" min="1" name="total_seats" value="<?=isset($trip)?$trip['total_seats']:1?>" required>
+<label>Places disponibles</label><input class="form-control mb-3" type="number" min="0" name="available_seats" value="<?=isset($trip)?$trip['available_seats']:1?>" required>
+<?php if(!isset($trip)): ?><p>Contact : <?=htmlspecialchars($user['firstname'].' '.$user['lastname'].' - '.$user['email'].' - '.$user['phone'])?></p><?php endif;?>
+<button class="btn btn-dark">Enregistrer</button></form></div><?php require dirname(__DIR__).'/layouts/footer.php'; ?>

@@ -1,0 +1,1 @@
+// Point d'entrée JavaScript de l'application.
