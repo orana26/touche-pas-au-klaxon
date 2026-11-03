@@ -8,6 +8,6 @@
   "autoload-dev": {"psr-4": {"Tests\\": "tests/"}},
   "scripts": {
     "test": "phpunit",
-    "stan": "phpstan analyse app public --level=6"
+    "stan": "phpstan analyse app public"
   }
 }
